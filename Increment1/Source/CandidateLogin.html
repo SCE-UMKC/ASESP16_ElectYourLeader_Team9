@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Candidate Login Page</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		
+		<div>
+			
+			<div id="header">
+					<span id="title">Elect Your Leader</span>
+			</div>	
+
+			<div id="navigation" >
+				<div id="left">
+					<ul>
+						<a href="Home.html"><li>Home</li></a>
+						<li>Register
+							<ul class="dropdown">
+								<li><a href="VoterRegistration.html">Voter Registration</a></li>
+								<li><a href="CandidateRegistration.html">Candidate Registration</a></li>
+							</ul>
+						</li>
+						<li>Candidates</li>	
+						<div class="clear"></div>
+					</ul>
+				</div>	
+				<div id="right">
+					<ul>
+						<li>Contact Us</li>	
+						<li>Login
+							<ul class="dropdown">
+								<li><a href="VoterLogin.html">Voter Login</a></li>
+								<li><a href="CandidateLogin.html">Candidate Login</a></li>
+							</ul>
+						</li>
+						</li>
+						<div class="clear"></div>		
+					</ul>
+				</div>	
+			</div>
+
+			<div id="logincontainer">
+				<div id="loginheader">
+					<h3 id="logintitle">Candidate Login</h3>
+				</div>
+				<div id="formheader">	
+					<form id="loginform">
+						
+					        <div class="formunit"><label for="username">Username</label></div>
+					        <div class="formunit"><input type="text" id="username"></div>
+					        <div class="formunit"><span id="username-help"></span></div>
+				    	
+				    		<div class="formunit"><label for="password">Password</label></div>
+					        <div class="formunit"><input type="text" id="password"></div>
+					        <div class="formunit"><span id="password-help"></span></div>
+
+					        <div class="formunit"><span id="forgotpassword">Forgot Password</span></div>
+				    	
+				    		<div class="formunit"><button id="loginbutton">Login</button></div>
+			    	</form>	
+		    	</div>
+			</div>
+
+		</div>
+
+	</body>
+</html>
