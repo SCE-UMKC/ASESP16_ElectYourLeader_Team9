@@ -1,0 +1,47 @@
+CREATE TABLE Voter(
+	firstName VARCHAR(50) NOT NULL,
+	lastName VARCHAR(50) NOT NULL,
+	uid VARCHAR(15) NOT NULL,
+	dob DATE NOT NULL,
+	emailId VARCHAR(25) NOT NULL,
+	password1 VARCHAR(15) NOT NULL,
+	password2 VARCHAR(15) NOT NULL,
+	candidateVoted VARCHAR(50),
+	voted VARCHAR(5) NOT NULL,
+	deletionStatus VARCHAR(5) NOT NULL,
+	voterSnap LONGBLOB,
+	PRIMARY KEY (uid)
+	);
+
+
+	
+CREATE TABLE Candidate(
+	firstName VARCHAR(50) NOT NULL,
+	lastName VARCHAR(50) NOT NULL,
+	uid VARCHAR(15) NOT NULL,
+	dob DATE NOT NULL,
+	emailId VARCHAR(25) NOT NULL,
+	password1 VARCHAR(15) NOT NULL,
+	password2 VARCHAR(15) NOT NULL,
+	highSchoolName VARCHAR(50),
+	schoolPassingOutWeekYear VARCHAR(20),
+	underGradSchoolName VARCHAR(50),
+	underGradPassingOutWeekYear VARCHAR(20),
+	gradSchoolName VARCHAR(50),
+	gradPassingOutWeekYear VARCHAR(20),
+	employer1 VARCHAR(50),
+	employerYear1 VARCHAR(20),
+	employer2 VARCHAR(50),
+	employerYear2 VARCHAR(20),
+	employer3 VARCHAR(50),
+	employerYear3 VARCHAR(20),
+	deletionStatus VARCHAR(5) NOT NULL,
+	candidateSnap LONGBLOB,
+	state VARCHAR(25) NOT NULL,
+	PRIMARY KEY (uid)
+	);
+	
+
+	
+	
+	
