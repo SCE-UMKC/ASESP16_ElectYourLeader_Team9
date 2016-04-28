@@ -6,13 +6,23 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.sql.SQLException;
+import java.util.Date;
+import java.util.Map;
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.image.*;
+import java.io.*;
+import javax.imageio.*;
+import javax.swing.*;
 
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.struts2.ServletActionContext;
+import org.apache.struts2.interceptor.SessionAware;
 import org.aseproject.model.Voter;
 import org.aseproject.service.VoterService;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class VoterLoginAction extends ActionSupport{
@@ -21,6 +31,8 @@ public class VoterLoginAction extends ActionSupport{
 	private Voter displayVoter;
 	private VoterService voterService;
 	public byte[] profilePic = null;
+	BufferedImage img;
+	private Map<String, Object> session;
 	
 	
 	public byte[] getProfilePic() {
@@ -78,7 +90,10 @@ public class VoterLoginAction extends ActionSupport{
 	}
 	
 	public String execute() throws SQLException, IOException{
+		
 		System.out.println("Inside execute method");
+		CastVoteAction.setDisplayVoter(displayVoter);
+		
 		System.out.println("FirstName "+displayVoter.getFirstName());
 		System.out.println("LastName "+displayVoter.getLastName());
 		System.out.println("UID "+displayVoter.getUid());
@@ -91,10 +106,14 @@ public class VoterLoginAction extends ActionSupport{
         profilePic = displayVoter.getProfileImage().getBytes(1,(int)displayVoter.getProfileImage().length());
         
         
-        
+        MyAction.setMyContentLength((int)displayVoter.getProfileImage().length());
+        MyAction.setMyBufferSize((int)displayVoter.getProfileImage().length());
+        MyAction.setMyImageInBytes(profilePic);
+   
         return SUCCESS;
 		
 	}
+	
 	
 
 }
