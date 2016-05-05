@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	
+	<package name="default" namespace="/" extends="struts-default">
+		<action name="voterRegistration" class="org.aseproject.action.VoterRegistrationAction" method="execute">
+			<result name="success">/Success.jsp</result>
+			<result name="error">/Error.jsp</result>
+			<result name="input">/VoterRegistration.jsp</result>
+		</action>
+		<action name="candidateRegistration" class="org.aseproject.action.CandidateRegistrationAction" method="execute">
+			<result name="success">/Success.jsp</result>
+			<result name="error">/Error.jsp</result>
+			<result name="input">/CandidateRegistration.jsp</result>
+		</action>
+		
+		<action name="voterLogin" class="org.aseproject.action.VoterLoginAction" method="execute">
+			<result name="success">/VoterRegisteredDetails.jsp</result>
+			<result name="error">/Error.jsp</result>
+			<result name="input">/VoterLogin.jsp</result>
+		</action>
+		<action name="candidateLogin" class="org.aseproject.action.CandidateLoginAction" method="execute">
+			<result name="success">/Success.jsp</result>
+			<result name="error">/Error.jsp</result>
+			<result name="input">/CandidateLogin.jsp</result>
+		</action>
+		
+		<action name="forgotPasswordVoter" class="org.aseproject.action.ForgotPasswordVoterAction" method="execute">
+			<result name="success">/Success.jsp</result>
+			<result name="error">/Error.jsp</result>
+			<result name="input">/ForgotPasswordVoter.jsp</result>
+		</action>
+		<action name="forgotPasswordCandidate" class="org.aseproject.action.ForgotPasswordCandidateAction" method="execute">
+			<result name="success">/Success.jsp</result>
+			<result name="error">/Error.jsp</result>
+			<result name="input">/ForgotPasswordCandidate.jsp</result>
+		</action>
+	</package>
+	
+		
+</struts>
